@@ -7,7 +7,7 @@ import org.lucky_devs.Transport_Management.dominio.enums.Genero;
 @Entity
 @Table(name = "Clientes")
 @Data
-public class ClientesEntity {
+public class ClienteEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
