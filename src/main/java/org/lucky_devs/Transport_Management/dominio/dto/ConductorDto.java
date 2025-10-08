@@ -3,10 +3,12 @@ import org.lucky_devs.Transport_Management.dominio.enums.Estado;
 import java.time.LocalDate;
 
 public record ConductorDto(
-        Long id_Conductor,
+        Long id_conductor,
+        String nombre,
         String licencia,
         LocalDate fechaNacimiento,
         Estado estado,
-        Long antiguedad
+        String direccion,
+        String telefono
 ) {
 }

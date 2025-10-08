@@ -6,7 +6,10 @@ import java.util.Date;
 
 public record ModConductor(
         String licencia,
+        String Nombre,
         Date fechaNacimiento,
-        Estado estado
+        Estado estado,
+        String dreccion,
+        String telefono
 ) {
 }
