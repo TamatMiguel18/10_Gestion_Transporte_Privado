@@ -1,7 +1,7 @@
 package org.lucky_devs.Transport_Management.persistence.mapper;
 
 import org.lucky_devs.Transport_Management.dominio.dto.ClientesDto;
-import org.lucky_devs.Transport_Management.persistence.entity.ClienteEntity;
+import org.lucky_devs.Transport_Management.persistence.entity.ClientesEntity;
 import org.mapstruct.*;
 
 import java.util.List;
@@ -15,7 +15,7 @@ public interface ClientesMapper {
     @Mapping(source = "telefono", target = "telefono")
     @Mapping(source = "edad", target = "edad")
     @Mapping(source = "genero", target = "genero")
-    ClienteEntity toEntity(ClientesDto dto);
+    ClientesEntity toEntity(ClientesDto dto);
 
     @Mapping(source = "id_cliente", target = "id_cliente")
     @Mapping(source = "nombre", target = "nombre")
@@ -23,11 +23,11 @@ public interface ClientesMapper {
     @Mapping(source = "telefono", target = "telefono")
     @Mapping(source = "edad", target = "edad")
     @Mapping(source = "genero", target = "genero")
-    ClientesDto toDto(ClienteEntity entity);
+    ClientesDto toDto(ClientesEntity entity);
 
-    List<ClientesDto> toDtoList(Iterable<ClienteEntity> entities);
+    List<ClientesDto> toDtoList(Iterable<ClientesEntity> entities);
 
-    void updateEntityFromDto(ClientesDto dto, @MappingTarget ClienteEntity entity);
+    void updateEntityFromDto(ClientesDto dto, @MappingTarget ClientesEntity entity);
 
-    List<ClientesDto> toDto(List<ClienteEntity> all);
+    List<ClientesDto> toDto(List<ClientesEntity> all);
 }

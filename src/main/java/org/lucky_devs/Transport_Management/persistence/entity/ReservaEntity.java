@@ -23,7 +23,7 @@ public class ReservaEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
-    private ClienteEntity clientes;
+    private ClientesEntity clientes;
 
     @ManyToOne
     @JoinColumn(name = "id_ruta", nullable = false)

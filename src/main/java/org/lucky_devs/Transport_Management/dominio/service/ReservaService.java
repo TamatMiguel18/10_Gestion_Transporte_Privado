@@ -5,7 +5,7 @@ import org.lucky_devs.Transport_Management.dominio.dto.ModReservaDto;
 import org.lucky_devs.Transport_Management.dominio.dto.ReservaRequestDto;
 import org.lucky_devs.Transport_Management.dominio.dto.ReservaResponseDto;
 import org.lucky_devs.Transport_Management.dominio.exception.ReservaNotFound;
-import org.lucky_devs.Transport_Management.persistence.entity.ClienteEntity;
+import org.lucky_devs.Transport_Management.persistence.entity.ClientesEntity;
 import org.lucky_devs.Transport_Management.persistence.entity.ReservaEntity;
 import org.lucky_devs.Transport_Management.persistence.entity.RutaEntity;
 import org.lucky_devs.Transport_Management.persistence.entity.TarifasEntity;
@@ -67,7 +67,7 @@ public class ReservaService {
         TarifasEntity tarifaEntity = tarifaRepository.findById(requestDto.idTarifa())
                 .orElseThrow(() -> new RuntimeException("Tarifa no encontrada con ID: " + requestDto.idTarifa()));
 
-        ClienteEntity clienteEntity = clienteRepository.findById(requestDto.idCliente())
+        ClientesEntity clienteEntity = clienteRepository.findById(requestDto.idCliente())
                 .orElseThrow(() -> new RuntimeException("Cliente no encontrado con ID: " + requestDto.idCliente()));
 
         RutaEntity rutaEntity = rutaRepository.findById(requestDto.idRuta())

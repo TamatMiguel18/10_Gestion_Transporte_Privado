@@ -12,7 +12,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.ReportingPolicy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 
 import java.util.List;
 
@@ -60,7 +59,7 @@ public abstract class ReservaMapper {
         }
     }
 
-    public ClienteEntity mapIdClienteToCliente(Long idCliente){
+    public ClientesEntity mapIdClienteToCliente(Long idCliente){
         if (idCliente == null){
             return null;
         }else{
