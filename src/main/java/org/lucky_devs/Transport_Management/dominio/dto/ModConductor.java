@@ -1,14 +1,15 @@
 package org.lucky_devs.Transport_Management.dominio.dto;
-import org.lucky_devs.Transport_Management.dominio.enums.Estado;
-import java.time.LocalDate;
 
-public record ConductorDto(
-        Long id_conductor,
-        String nombre,
+import org.lucky_devs.Transport_Management.dominio.enums.Estado;
+
+import java.util.Date;
+
+public record ModConductor(
         String licencia,
-        LocalDate fechaNacimiento,
+        String Nombre,
+        Date fechaNacimiento,
         Estado estado,
-        String direccion,
+        String dreccion,
         String telefono
 ) {
 }
