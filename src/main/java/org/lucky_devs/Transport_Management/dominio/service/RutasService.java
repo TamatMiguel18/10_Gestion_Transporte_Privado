@@ -31,7 +31,7 @@ public class RutasService {
     }
 
     public RutasResponseDto agregarNuevaRuta(RutasRequestDto rutasRequestDto){
-        if (this.rutasRepository.findByDireccion_Destino(rutasRequestDto.direccion_destino()) != null){
+        if (this.rutasRepository.findRutaByDestino(rutasRequestDto.direccion_destino()) != null){
             throw new RutaYaExiste(rutasRequestDto.direccion_destino());
         }else{
             RutaEntity rutaEntity = this.rutasMapper.toEntity(rutasRequestDto);
