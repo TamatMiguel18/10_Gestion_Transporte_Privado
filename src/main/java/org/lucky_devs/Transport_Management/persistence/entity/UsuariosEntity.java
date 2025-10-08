@@ -7,14 +7,14 @@ import lombok.*;
 @Table(name = "Usuarios")
 @Data
 public class UsuariosEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
     private Long id_usuario;
 
-    @Column(name = "id_conductor", nullable = false)
-    private Long id_conductor;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_conductor", nullable = false)
+    private ConductorEntity conductor;
 
     @Column(name = "correo", nullable = false, unique = true)
     private String correo;
@@ -30,12 +30,12 @@ public class UsuariosEntity {
         this.id_usuario = id_usuario;
     }
 
-    public Long getId_conductor() {
-        return id_conductor;
+    public ConductorEntity getConductor() {
+        return conductor;
     }
 
-    public void setId_conductor(Long id_conductor) {
-        this.id_conductor = id_conductor;
+    public void setConductor(ConductorEntity conductor) {
+        this.conductor = conductor;
     }
 
     public String getCorreo() {
