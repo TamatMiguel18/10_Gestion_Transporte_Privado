@@ -13,14 +13,14 @@ public interface TarifasMapper {
     @Mapping(source = "tipoUnidad", target = "tipoUnidad")
     @Mapping(source = "tarifa_base", target = "tarifa_base")
     @Mapping(source = "recargo", target = "recargo")
-    @Mapping(source = "recarga_hora_pico", target = "recarga_hora_pico")
+    @Mapping(source = "hora_inicio_pico", target = "hora_inicio_pico")
     TarifasEntity toEntity(TarifasDto dto);
 
     @Mapping(source = "id_tarifa", target = "id_tarifa")
     @Mapping(source = "tipoUnidad", target = "tipoUnidad")
     @Mapping(source = "tarifa_base", target = "tarifa_base")
     @Mapping(source = "recargo", target = "recargo")
-    @Mapping(source = "recarga_hora_pico", target = "recarga_hora_pico")
+    @Mapping(source = "hora_inicio_pico", target = "hora_inicio_pico")
     TarifasDto toDto(TarifasEntity entity);
 
     List<TarifasDto> toDtoList(Iterable<TarifasEntity> entities);

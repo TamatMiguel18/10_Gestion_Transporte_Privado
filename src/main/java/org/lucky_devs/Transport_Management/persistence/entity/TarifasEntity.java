@@ -25,6 +25,6 @@ public class TarifasEntity {
     @Column(name = "recargo", nullable = false)
     private Double recargo;
 
-    @Column(name = "recarga_hora_pico", nullable = false)
-    private LocalDateTime recarga_hora_pico;
+    @Column(name = "hora_inicio_pico", nullable = false)
+    private LocalDateTime hora_inicio_pico;
 }

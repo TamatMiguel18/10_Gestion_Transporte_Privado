@@ -10,6 +10,6 @@ public record TarifasDto(
         Tipo_Unidad tipoUnidad,
         Double tarifa_base,
         Double recargo,
-        LocalDateTime recarga_hora_pico
+        LocalDateTime hora_inicio_pico
 ) {
 }
