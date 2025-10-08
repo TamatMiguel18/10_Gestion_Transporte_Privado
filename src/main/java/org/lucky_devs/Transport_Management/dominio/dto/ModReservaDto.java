@@ -6,10 +6,6 @@ import org.lucky_devs.Transport_Management.dominio.enums.EstadoReserva;
 
 import java.time.LocalDateTime;
 
-/**
- * DTO utilizado para la modificación (PUT/PATCH) de una Reserva existente.
- * Incluye todos los campos actualizables de la entidad Reserva.
- */
 public record ModReservaDto(
         @NotNull(message = "El ID de la tarifa es obligatorio.")
         Long idTarifa,

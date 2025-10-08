@@ -17,14 +17,17 @@ public class ReservaEntity {
     @Column(name = "id_reserva")
     private Long idReserva;
 
-    @Column(name = "id_tarifa", nullable = false)
-    private Long idTarifa;
+    @ManyToOne
+    @JoinColumn(name = "id_tarifa", nullable = false)
+    private TarifasEntity tarifas;
 
-    @Column(name = "id_cliente", nullable = false)
-    private Long idCliente;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private ClienteEntity clientes;
 
-    @Column(name = "id_ruta", nullable = false)
-    private Long idRuta;
+    @ManyToOne
+    @JoinColumn(name = "id_ruta", nullable = false)
+    private RutaEntity rutas;
 
     @Column(name = "fecha_hora_inicio", nullable = false)
     private LocalDateTime fechaHoraInicio;
